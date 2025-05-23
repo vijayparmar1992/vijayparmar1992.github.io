@@ -1,3 +1,8 @@
+---
+layout: default
+title: Vijay Parmar
+---
+
 # Vijay Parmar
 
 **Email:** your.email@example.com  
