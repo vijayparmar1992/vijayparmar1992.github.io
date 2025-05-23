@@ -3,5 +3,5 @@ description:
 theme: minima  # You can change 'minima' to other supported themes
 minima:
   skin: classic
-  include_css:
-    - /assets/css/custom.css
+include:
+  - _includes/head-custom.html
