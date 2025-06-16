@@ -1,22 +1,21 @@
----
-layout: default
-title: Vijay Parmar
----
 
 # Vijay Parmar
 
-**Email:** your.email@example.com  
-**GitHub:** [vijayparmar1992](https://github.com/vijayparmar1992)  
-**LinkedIn:** [yourprofile](https://www.linkedin.com/in/yourprofile/)
+**Email:**    vijay.parmar1992@gmail.com  
+**GitHub:**   [vijayparmar1992](https://github.com/vijayparmar1992)  
+**LinkedIn:** [vijay parmar](https://www.linkedin.com/in/vijay-parmar-31784159/)
 
 ---
 
 ## Experience
 
-**Software Engineer**  
-Company Name | Jan 2020 – Present  
-- Developed modern web applications using React, Node.js, and Python  
-- Led a team of 4 developers in Agile sprints
+**Backend Developer**  
+IBM | March 2024 – Present  
+- OIDC Auth 2.0 Integration: Led the design and implementation of OpenID Connect (OIDC) 2.0-based delegated authentication, leveraging IBMID and ADFS to ensure seamless, secure authentication across multiple platforms. This initiative improved access control, user identity management, and minimized security risks by centralizing authentication methods while adhering to modern security standards.
+
+- Secure SMTP Implementation: Developed and deployed the Secure SMTP feature from the ground up, enabling encrypted email communications to safeguard sensitive data in transit. This involved configuring secure protocols (TLS/SSL) and ensuring compliance with organizational security policies, reducing vulnerability to email-based threats like phishing and data interception.
+
+These contributions enhanced the security posture of our product by ensuring robust authentication methods and securing data communications end-to-end.
 
 <!-- Add more experiences as needed -->
 
