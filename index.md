@@ -120,71 +120,56 @@ title: Vijay Parmar - Senior Software Developer
 ### **🌐 Web Development**
 <div class="skill-item" style="--skill-width: 90%">
   <span class="skill-name">HTML5, CSS3, JavaScript (ES6+)</span>
-  <span class="skill-level">90%</span>
 </div>
 <div class="skill-item" style="--skill-width: 85%">
   <span class="skill-name">React, Modern Frontend Frameworks</span>
-  <span class="skill-level">85%</span>
 </div>
 <div class="skill-item" style="--skill-width: 88%">
   <span class="skill-name">Responsive Design & UX/UI Principles</span>
-  <span class="skill-level">88%</span>
 </div>
 
 ### **⚙️ Backend Technologies**
 <div class="skill-item" style="--skill-width: 92%">
   <span class="skill-name">Node.js, Python</span>
-  <span class="skill-level">92%</span>
 </div>
 <div class="skill-item" style="--skill-width: 89%">
   <span class="skill-name">RESTful APIs & Microservices</span>
-  <span class="skill-level">89%</span>
 </div>
 <div class="skill-item" style="--skill-width: 87%">
   <span class="skill-name">Database Design & Management</span>
-  <span class="skill-level">87%</span>
 </div>
 
 ### **🔧 DevOps & Tools**
 <div class="skill-item" style="--skill-width: 85%">
   <span class="skill-name">GitHub Actions, Docker</span>
-  <span class="skill-level">85%</span>
 </div>
 <div class="skill-item" style="--skill-width: 88%">
   <span class="skill-name">CI/CD Pipelines</span>
-  <span class="skill-level">88%</span>
 </div>
 <div class="skill-item" style="--skill-width: 90%">
   <span class="skill-name">Build & Release Management</span>
-  <span class="skill-level">90%</span>
 </div>
 
 ### **🔐 Security & Authentication**
 <div class="skill-item" style="--skill-width: 93%">
   <span class="skill-name">OIDC 2.0, OAuth</span>
-  <span class="skill-level">93%</span>
 </div>
 <div class="skill-item" style="--skill-width: 91%">
   <span class="skill-name">SMTP Security, TLS/SSL</span>
-  <span class="skill-level">91%</span>
 </div>
 <div class="skill-item" style="--skill-width: 89%">
   <span class="skill-name">Identity Management Systems</span>
-  <span class="skill-level">89%</span>
 </div>
 
 ### **💻 Programming Languages**
 <div class="skill-item" style="--skill-width: 95%">
   <span class="skill-name">C++, Python, JavaScript</span>
-  <span class="skill-level">95%</span>
 </div>
 <div class="skill-item" style="--skill-width: 92%">
   <span class="skill-name">LabVIEW Development</span>
-  <span class="skill-level">92%</span>
 </div>
 <div class="skill-item" style="--skill-width: 87%">
   <span class="skill-name">Shell Scripting</span>
-  <span class="skill-level">87%</span>
 </div>
 
 </div>
