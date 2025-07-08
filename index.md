@@ -3,6 +3,32 @@ layout: default
 title: Vijay Parmar - Senior Software Developer
 ---
 
+<!-- Dark Mode Toggle -->
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+  <span id="themeIcon">🌙</span>
+</button>
+
+<!-- Floating Action Buttons -->
+<div class="floating-actions">
+  <button class="fab fab-email" onclick="copyEmail()" aria-label="Copy email address">
+    📧
+  </button>
+  <a href="https://www.linkedin.com/in/vijay-parmar-31784159/" target="_blank" class="fab fab-linkedin" aria-label="LinkedIn profile">
+    💼
+  </a>
+  <a href="https://github.com/vijayparmar1992" target="_blank" class="fab fab-github" aria-label="GitHub profile">
+    💻
+  </a>
+  <button class="fab fab-top" onclick="scrollToTop()" aria-label="Scroll to top">
+    ⬆️
+  </button>
+</div>
+
+<!-- Copy Email Feedback -->
+<div class="copy-feedback" id="copyFeedback">
+  📧 Email copied to clipboard!
+</div>
+
 <div class="hero-section">
 
 # Vijay Parmar
@@ -92,29 +118,74 @@ title: Vijay Parmar - Senior Software Developer
 <div class="skills-grid">
 
 ### **🌐 Web Development**
-- HTML5, CSS3, JavaScript (ES6+)
-- React, Modern Frontend Frameworks
-- Responsive Design & UX/UI Principles
+<div class="skill-item" style="--skill-width: 90%">
+  <span class="skill-name">HTML5, CSS3, JavaScript (ES6+)</span>
+  <span class="skill-level">90%</span>
+</div>
+<div class="skill-item" style="--skill-width: 85%">
+  <span class="skill-name">React, Modern Frontend Frameworks</span>
+  <span class="skill-level">85%</span>
+</div>
+<div class="skill-item" style="--skill-width: 88%">
+  <span class="skill-name">Responsive Design & UX/UI Principles</span>
+  <span class="skill-level">88%</span>
+</div>
 
 ### **⚙️ Backend Technologies**
-- Node.js, Python
-- RESTful APIs & Microservices
-- Database Design & Management
+<div class="skill-item" style="--skill-width: 92%">
+  <span class="skill-name">Node.js, Python</span>
+  <span class="skill-level">92%</span>
+</div>
+<div class="skill-item" style="--skill-width: 89%">
+  <span class="skill-name">RESTful APIs & Microservices</span>
+  <span class="skill-level">89%</span>
+</div>
+<div class="skill-item" style="--skill-width: 87%">
+  <span class="skill-name">Database Design & Management</span>
+  <span class="skill-level">87%</span>
+</div>
 
 ### **🔧 DevOps & Tools**
-- GitHub Actions, Docker
-- CI/CD Pipelines
-- Build & Release Management
+<div class="skill-item" style="--skill-width: 85%">
+  <span class="skill-name">GitHub Actions, Docker</span>
+  <span class="skill-level">85%</span>
+</div>
+<div class="skill-item" style="--skill-width: 88%">
+  <span class="skill-name">CI/CD Pipelines</span>
+  <span class="skill-level">88%</span>
+</div>
+<div class="skill-item" style="--skill-width: 90%">
+  <span class="skill-name">Build & Release Management</span>
+  <span class="skill-level">90%</span>
+</div>
 
 ### **🔐 Security & Authentication**
-- OIDC 2.0, OAuth
-- SMTP Security, TLS/SSL
-- Identity Management Systems
+<div class="skill-item" style="--skill-width: 93%">
+  <span class="skill-name">OIDC 2.0, OAuth</span>
+  <span class="skill-level">93%</span>
+</div>
+<div class="skill-item" style="--skill-width: 91%">
+  <span class="skill-name">SMTP Security, TLS/SSL</span>
+  <span class="skill-level">91%</span>
+</div>
+<div class="skill-item" style="--skill-width: 89%">
+  <span class="skill-name">Identity Management Systems</span>
+  <span class="skill-level">89%</span>
+</div>
 
 ### **💻 Programming Languages**
-- C++, Python, JavaScript
-- LabVIEW Development
-- Shell Scripting
+<div class="skill-item" style="--skill-width: 95%">
+  <span class="skill-name">C++, Python, JavaScript</span>
+  <span class="skill-level">95%</span>
+</div>
+<div class="skill-item" style="--skill-width: 92%">
+  <span class="skill-name">LabVIEW Development</span>
+  <span class="skill-level">92%</span>
+</div>
+<div class="skill-item" style="--skill-width: 87%">
+  <span class="skill-name">Shell Scripting</span>
+  <span class="skill-level">87%</span>
+</div>
 
 </div>
 
@@ -147,5 +218,133 @@ Spearheaded continuous improvement activities resulting in reduced TCO and enhan
 I'm passionate about backend development, security implementations, and technical leadership. Always open to discussing innovative solutions and collaboration opportunities.
 
 </div>
+
+<!-- Interactive JavaScript for enhanced functionality -->
+<script>
+// Dark Mode Toggle Functionality
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+const html = document.documentElement;
+
+// Load saved theme
+const savedTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', savedTheme);
+updateThemeIcon(savedTheme);
+
+themeToggle.addEventListener('click', () => {
+  const currentTheme = html.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  
+  html.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  updateThemeIcon(newTheme);
+  
+  // Add a subtle animation
+  themeToggle.style.transform = 'rotate(360deg)';
+  setTimeout(() => {
+    themeToggle.style.transform = '';
+  }, 300);
+});
+
+function updateThemeIcon(theme) {
+  themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+}
+
+// Copy Email Functionality
+function copyEmail() {
+  const email = 'vijay.parmar1992@gmail.com';
+  navigator.clipboard.writeText(email).then(() => {
+    showCopyFeedback();
+  }).catch(() => {
+    // Fallback for older browsers
+    const textArea = document.createElement('textarea');
+    textArea.value = email;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+    showCopyFeedback();
+  });
+}
+
+function showCopyFeedback() {
+  const feedback = document.getElementById('copyFeedback');
+  feedback.classList.add('show');
+  setTimeout(() => {
+    feedback.classList.remove('show');
+  }, 2000);
+}
+
+// Smooth Scroll to Top
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+// Animate skill bars on scroll
+const observeSkills = () => {
+  const skillItems = document.querySelectorAll('.skill-item');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+  
+  skillItems.forEach(item => observer.observe(item));
+};
+
+// Initialize animations when page loads
+document.addEventListener('DOMContentLoaded', () => {
+  observeSkills();
+  
+  // Add enhanced hover class to project cards
+  const projectCards = document.querySelectorAll('.projects-section > div');
+  projectCards.forEach(card => {
+    card.classList.add('enhanced-hover');
+  });
+});
+
+// Show/hide floating actions based on scroll
+let lastScrollTop = 0;
+const floatingActions = document.querySelector('.floating-actions');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  // Show back to top button only when scrolled down
+  const backToTopBtn = document.querySelector('.fab-top');
+  if (scrollTop > 300) {
+    backToTopBtn.style.opacity = '1';
+    backToTopBtn.style.pointerEvents = 'auto';
+  } else {
+    backToTopBtn.style.opacity = '0.3';
+    backToTopBtn.style.pointerEvents = 'none';
+  }
+  
+  lastScrollTop = scrollTop;
+});
+
+// Add keyboard navigation support
+document.addEventListener('keydown', (e) => {
+  // Toggle dark mode with Ctrl/Cmd + D
+  if ((e.ctrlKey || e.metaKey) && e.key === 'd') {
+    e.preventDefault();
+    themeToggle.click();
+  }
+  
+  // Scroll to top with Home key
+  if (e.key === 'Home' && e.ctrlKey) {
+    e.preventDefault();
+    scrollToTop();
+  }
+});
+</script>
 
 <!-- Additional sections can be added here: Certifications, Awards, Languages, etc. -->
