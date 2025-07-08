@@ -62,8 +62,12 @@
 
 ## Education
 
-**B.Tech in Computer Science**  
-University Name, Year
+| Degree | University | Year | Percentage |
+|--------|------------|------|------------|
+| **M.TECH (EMBEDDED SYSTEMS)** | R.K University, Rajkot | July-2015 | 74% |
+| **B.TECH (E&C)** | Sanpat University, Suryara | July-2013 | 76.16% |
+| **DIPLOMA** | Gov. Polytechnic, Gandhinagar | June-2010 | 68.30% |
+| **10th** | Gujarat State Education Board, Gandhinagar | June-2007 | 85.23% |
 
 ---
 
