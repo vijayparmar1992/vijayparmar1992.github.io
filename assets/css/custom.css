@@ -1,23 +1,27 @@
 body {
-  background: #fff;
-  color: #161616;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #2c3e50;
   font-family: 'IBM Plex Sans', 'Segoe UI', Arial, sans-serif;
   margin: 0;
+  line-height: 1.6;
 }
 
 a {
-  color: #0f62fe;
+  color: #667eea;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
 }
 a:hover, a:focus {
-  color: #0043ce;
-  text-decoration: underline;
+  color: #764ba2;
+  border-bottom: 2px solid #667eea;
+  transform: translateY(-1px);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #161616;
+  color: #2c3e50;
   font-family: 'IBM Plex Sans', 'Segoe UI', Arial, sans-serif;
   font-weight: 700;
   letter-spacing: -0.5px;
@@ -26,136 +30,285 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.75rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 3.5rem;
   line-height: 1.1;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+/* Contact info styling */
+.wrapper p:first-of-type {
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white !important;
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+  font-weight: 500;
+}
+
+.wrapper p:first-of-type strong {
+  color: white !important;
+  background: rgba(255,255,255,0.2);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  margin-right: 0.5rem;
+}
+
+.wrapper p:first-of-type a {
+  color: #f0f8ff !important;
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  font-weight: 600;
+}
+
+.wrapper p:first-of-type a:hover {
+  color: white !important;
+  border-bottom: 2px solid white;
+  transform: none;
 }
 h2 {
-  font-size: 2rem;
+  color: #2c3e50;
+  font-size: 2.2rem;
   line-height: 1.2;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+  position: relative;
+}
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
 }
 h3 {
-  font-size: 1.5rem;
+  color: #34495e;
+  font-size: 1.6rem;
   line-height: 1.3;
+  margin-top: 2.5rem;
+  padding: 1rem 0;
+  border-left: 4px solid #667eea;
+  padding-left: 1.5rem;
+  background: linear-gradient(90deg, rgba(102, 126, 234, 0.1) 0%, transparent 100%);
+  border-radius: 0 10px 10px 0;
 }
 
 hr {
   border: 0;
-  border-top: 1px solid #e0e0e0;
-  margin: 2.5rem 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  margin: 3rem 0;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
 }
 
 .site-header, .site-footer {
-  background: #161616;
-  color: #fff;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
   border: none;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .site-title, .site-footer {
-  color: #fff !important;
+  color: white !important;
   font-family: 'IBM Plex Sans', 'Segoe UI', Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: -1px;
 }
 
 .site-header a, .site-footer a {
-  color: #0f62fe;
+  color: #667eea;
 }
 
 .wrapper, .post-content, section {
-  background: #fff;
-  padding: 2rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(22,22,22,0.06);
-  margin-bottom: 2rem;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.05);
+  margin: 2rem auto;
+  max-width: 1000px;
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
 }
 
 code, pre {
-  background: #f4f4f4;
-  color: #161616;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #2c3e50;
   font-family: 'IBM Plex Mono', 'Fira Mono', 'Consolas', monospace;
-  border-radius: 4px;
-  padding: 0.2em 0.4em;
+  border-radius: 8px;
+  padding: 0.3em 0.6em;
+  border: 1px solid #dee2e6;
 }
 
 pre {
   overflow-x: auto;
-  padding: 1em;
+  padding: 1.5em;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 ul, ol {
-  margin-left: 2rem;
-  padding-left: 1rem;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li {
+  margin: 0.8rem 0;
+  padding: 0.5rem 0 0.5rem 2rem;
+  position: relative;
+  line-height: 1.7;
+}
+
+li::before {
+  content: '▶';
+  color: #667eea;
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+strong {
+  color: #2c3e50;
+  background: linear-gradient(120deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 700;
 }
 
 button, .btn {
-  background: #0f62fe;
-  color: #fff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
   font-family: 'IBM Plex Sans', 'Segoe UI', Arial, sans-serif;
   border: none;
-  border-radius: 3px;
-  padding: 0.6em 1.2em;
+  border-radius: 10px;
+  padding: 0.8em 1.5em;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.3s ease;
   margin: 0.5em 0;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 button:hover, .btn:hover, button:focus, .btn:focus {
-  background: #0043ce;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
   outline: none;
 }
 
 blockquote {
-  border-left: 4px solid #0f62fe;
-  margin: 1.5em 0;
-  padding: 0.6em 1.5em;
-  background: #f4f4f4;
-  color: #393939;
+  border-left: 5px solid #667eea;
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  color: #2c3e50;
   font-style: italic;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 table {
   border-collapse: collapse;
   width: 100%;
-  margin-bottom: 2em;
-}
-th, td {
-  border: 1px solid #e0e0e0;
-  padding: 0.75em 1em;
-  text-align: left;
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  background: white;
 }
 th {
-  background: #f4f4f4;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.2rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+td {
+  padding: 1rem;
+  border-bottom: 1px solid #e8ecf4;
+  transition: background 0.3s ease;
+  vertical-align: middle;
+}
+tr:hover td {
+  background: linear-gradient(90deg, rgba(102, 126, 234, 0.05) 0%, transparent 100%);
+  transform: scale(1.01);
+}
+tr:last-child td {
+  border-bottom: none;
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
-  background: #e0e0e0;
+  width: 12px;
+  background: #f1f3f4;
 }
 ::-webkit-scrollbar-thumb {
-  background: #b6b6b6;
-  border-radius: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 6px;
+  border: 2px solid #f1f3f4;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .wrapper, .post-content, section {
-    padding: 1rem 0.5rem;
-    border-radius: 0;
-    box-shadow: none;
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+    border-radius: 15px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+  
+  th, td {
+    padding: 0.8rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .wrapper, .post-content, section {
+    padding: 1.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 10px;
   }
 
   h1 {
     font-size: 2rem;
   }
-  h2 {
-    font-size: 1.4rem;
-  }
-  h3 {
-    font-size: 1.1rem;
+  
+  table {
+    font-size: 0.8rem;
   }
 }
