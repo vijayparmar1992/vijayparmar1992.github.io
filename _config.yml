@@ -1,7 +1,31 @@
-title: Vijay Parmar
-description:
-theme: minima  # You can change 'minima' to other supported themes
+title: Vijaykumar Parmar - Backend Developer & Technical Leader
+description: Results-driven engineer combining entrepreneurial mindset with enterprise expertise at IBM and NI. Passionate about innovation, technical leadership, and leveraging AI-powered tools to build scalable solutions.
+theme: minima
 minima:
   skin: classic
 include:
   - _includes/head-custom.html
+
+# SEO and Social
+author: Vijaykumar Parmar
+email: vijay.parmar1992@gmail.com
+linkedin_username: vijay-parmar-31784159
+github_username: vijayparmar1992
+
+# Site settings
+url: "https://vijayparmar1992.github.io"
+baseurl: ""
+lang: en
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - README.md
+  - cosmetic_improvements_analysis.md
+
+# Made with Bob
