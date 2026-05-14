@@ -37,7 +37,7 @@ title: Vijaykumar Parmar - Senior Software Engineer
 <div class="hero-section">
   <div class="hero-content">
     <h1 class="hero-title">Vijaykumar Parmar</h1>
-    <h2 class="hero-subtitle">Backend Developer & Technical Leader</h2>
+    <h2 class="hero-subtitle">Senior Software Engineer</h2>
     <p class="hero-tagline">Results-driven engineer combining entrepreneurial mindset with enterprise expertise at IBM and NI</p>
     
     <div class="hero-stats">

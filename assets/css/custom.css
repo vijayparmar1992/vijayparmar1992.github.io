@@ -1145,3 +1145,44 @@ a:hover {
 .visible { display: block; }
 
 /* Made with Bob */
+
+/* ============================================
+   Full-Width Dynamic Layout Override
+   ============================================ */
+
+.wrapper,
+.post-content,
+.site-content,
+main {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: var(--spacing-xl) var(--spacing-2xl) !important;
+}
+
+.container {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 0 var(--spacing-2xl) !important;
+}
+
+/* Responsive padding for smaller screens */
+@media (max-width: 768px) {
+  .wrapper,
+  .post-content,
+  .site-content,
+  main,
+  .container {
+    padding: var(--spacing-md) var(--spacing-lg) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper,
+  .post-content,
+  .site-content,
+  main,
+  .container {
+    padding: var(--spacing-sm) var(--spacing-md) !important;
+  }
+}
