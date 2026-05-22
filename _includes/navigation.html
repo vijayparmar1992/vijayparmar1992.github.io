@@ -1,5 +1,14 @@
+<!-- Mobile Menu Toggle -->
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <line x1="3" y1="12" x2="21" y2="12"></line>
+    <line x1="3" y1="6" x2="21" y2="6"></line>
+    <line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</button>
+
 <!-- Navigation Sidebar -->
-<nav class="sidebar">
+<nav class="sidebar" id="sidebar">
   <div class="sidebar-content">
     <div class="profile-section">
       <h1 class="profile-name">Vijaykumar Parmar</h1>
@@ -66,6 +75,38 @@
 </nav>
 
 <script>
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const sidebar = document.getElementById('sidebar');
+  const body = document.body;
+  
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      body.classList.toggle('menu-open');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (body.classList.contains('menu-open') &&
+          !sidebar.contains(e.target) &&
+          !menuToggle.contains(e.target)) {
+        sidebar.classList.remove('open');
+        body.classList.remove('menu-open');
+      }
+    });
+    
+    // Close menu when clicking a nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          sidebar.classList.remove('open');
+          body.classList.remove('menu-open');
+        }
+      });
+    });
+  }
+  
   // Theme toggle functionality
   const themeToggle = document.getElementById('themeToggle');
   const html = document.documentElement;
@@ -85,23 +126,32 @@
   const currentPath = window.location.pathname;
   const currentHash = window.location.hash;
   
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    const href = link.getAttribute('href');
-    
-    // Check if it's the AI Journey page
-    if (href === '/ai-journey.html' && currentPath.includes('ai-journey')) {
-      link.classList.add('active');
-    }
-    // Check if it's a hash link on the main page
-    else if (href.startsWith('/#') && currentPath === '/' && href.includes(currentHash)) {
-      link.classList.add('active');
-    }
-    // Default to About on main page
-    else if (href === '/#about' && currentPath === '/' && !currentHash) {
-      link.classList.add('active');
-    }
-  });
+  // Function to update active link
+  function updateActiveLink() {
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      const href = link.getAttribute('href');
+      
+      // Check if it's the AI Journey page
+      if (href === '/ai-journey.html' && (currentPath.includes('ai-journey') || currentPath.endsWith('ai-journey.html'))) {
+        link.classList.add('active');
+      }
+      // Check if it's a hash link on the main page
+      else if (href.startsWith('/#') && (currentPath === '/' || currentPath.includes('index')) && href.includes(currentHash)) {
+        link.classList.add('active');
+      }
+      // Default to About on main page
+      else if (href === '/#about' && (currentPath === '/' || currentPath.includes('index')) && !currentHash) {
+        link.classList.add('active');
+      }
+    });
+  }
+  
+  // Initial call
+  updateActiveLink();
+  
+  // Update on hash change
+  window.addEventListener('hashchange', updateActiveLink);
   
   // Smooth scroll for hash links on same page
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
