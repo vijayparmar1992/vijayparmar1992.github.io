@@ -3,10 +3,40 @@ layout: default
 title: Vijaykumar Parmar
 ---
 
+<!-- Accessibility: skip link -->
+<a class="skip-link" href="#main-content">Skip to content</a>
+
 {% include navigation.html %}
 
 <!-- Main Content -->
-<main class="main-content">
+<main id="main-content" class="main-content">
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section content-section">
+    <div class="hero-copy">
+      <p class="hero-kicker">Backend Developer at IBM</p>
+      <h2 class="hero-title">Building secure enterprise systems with AI-assisted engineering.</h2>
+      <p class="hero-summary">I bring 9+ years across backend development, industrial automation, test systems, and technical leadership, with current focus on OIDC, secure SMTP, modernization, and practical AI workflows.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="button-link button-primary">View Projects</a>
+        <a href="/ai-journey.html" class="button-link button-secondary">AI Journey</a>
+      </div>
+    </div>
+    <div class="hero-highlights" aria-label="Career highlights">
+      <div class="hero-stat">
+        <span class="hero-stat-value">9+</span>
+        <span class="hero-stat-label">Years Experience</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">IBM</span>
+        <span class="hero-stat-label">Backend Developer</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">AI</span>
+        <span class="hero-stat-label">Watsonx Ambassador</span>
+      </div>
+    </div>
+  </section>
   
   <!-- About Section -->
   <section id="about" class="content-section">

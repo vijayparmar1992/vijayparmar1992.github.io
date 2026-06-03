@@ -1,5 +1,5 @@
 <!-- Mobile Menu Toggle -->
-<button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-controls="sidebar" aria-expanded="false">
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
     <line x1="3" y1="12" x2="21" y2="12"></line>
     <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -8,7 +8,7 @@
 </button>
 
 <!-- Navigation Sidebar -->
-<nav class="sidebar" id="sidebar">
+<nav class="sidebar" id="sidebar" aria-label="Primary navigation" role="navigation">
   <div class="sidebar-content">
     <div class="profile-section">
       <h1 class="profile-name">Vijaykumar Parmar</h1>
@@ -82,10 +82,11 @@
   
   if (menuToggle) {
     menuToggle.addEventListener('click', () => {
-      sidebar.classList.toggle('open');
+      const isOpen = sidebar.classList.toggle('open');
       body.classList.toggle('menu-open');
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
-    
+
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
       if (body.classList.contains('menu-open') &&
@@ -93,15 +94,17 @@
           !menuToggle.contains(e.target)) {
         sidebar.classList.remove('open');
         body.classList.remove('menu-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
       }
     });
-    
+
     // Close menu when clicking a nav link
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         if (window.innerWidth <= 768) {
           sidebar.classList.remove('open');
           body.classList.remove('menu-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
         }
       });
     });
