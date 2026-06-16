@@ -1406,3 +1406,16 @@ body {
   }
 }
 
+
+/* Skill Item Links */
+.skill-item-link {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.skill-item-link:hover {
+  background-color: var(--accent-color) !important;
+  color: white !important;
+  border-color: var(--accent-color) !important;
+}
